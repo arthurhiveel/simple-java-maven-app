@@ -2,8 +2,8 @@ stages:
 - name: compile
   steps:
   - runScriptConfig:
-      image: java:8
-      shellScript: ls
+      image: maven
+      shellScript: mvn -B -DskipTests clean package
 - name: deliver
   steps:
   - runScriptConfig:
